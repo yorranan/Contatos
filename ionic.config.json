@@ -1,0 +1,7 @@
+{
+  "name": "appcontatostb",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
