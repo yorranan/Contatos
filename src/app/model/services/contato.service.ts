@@ -10,7 +10,7 @@ export class ContatoService {
   private lista_contatos: Contato[] = [];
 
   constructor() {
-    let c0: Contato = new Contato("Gab", 12345677, "gab@email.com", Genero.FEMINIO);
+    let c0: Contato = new Contato("Gab", 12345677, "gab@email.com", Genero.FEMININO);
     this.lista_contatos.push(c0);
   }
 

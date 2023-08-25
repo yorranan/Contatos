@@ -10,10 +10,10 @@ import { ContatoService } from 'src/app/model/services/contato.service';
 })
 export class HomePage {
 
-
+  
+  lista_contato: Contato[] = [];
   constructor(private router: Router, private contatoService: ContatoService) {
-    this.contatoService.obterTodos();
-    private lista_contato: Contato[] = contatoService[];
+    this.lista_contato = this.contatoService.obterTodos();
   }
 
   irParaCadastrar(){
