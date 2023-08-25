@@ -1,0 +1,5 @@
+export enum Genero{
+    MASCULINO = "MASCULINO",
+    FEMINIO = "FEMININO",
+    NAODECLARAR = "NAOINFORMAR"
+};

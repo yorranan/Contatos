@@ -1,0 +1,31 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Cadastro
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nome" placeholder="Insira o nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Telefone" placeholder="Insira o telefone" [(ngModel)]="telefone" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Email" placeholder="Insira o email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Gênero" placeholder="Selecione" [(ngModel)]="genero">
+        <ion-select-option value="MASCULINO">Masculino</ion-select-option>
+        <ion-select-option value="FEMININO">Feminino</ion-select-option>
+        <ion-select-option value="NAOINFORMAR">Não Informar</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-button expand="block" (click)="cadastrar()">Enviar</ion-button>
+  </ion-list>
+  
+</ion-content>
