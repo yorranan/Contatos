@@ -7,12 +7,9 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-list *ngFor="let contato of lista_contato">
-    <ion-item>
+  <ion-list *ngFor="let contato of lista_contato; let i = index">
+    <ion-item (click)="editar(i)">
       <ion-label>{{contato.nome}}</ion-label>
-      <ion-label>{{contato.telefone}}</ion-label>
-      <ion-label>{{contato.email}}</ion-label>
-      <ion-label>{{contato.genero}}</ion-label>
     </ion-item>
   </ion-list>
 
