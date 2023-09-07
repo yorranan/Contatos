@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { Contato } from 'src/app/model/entities/contato';
 import { Genero } from 'src/app/model/enumerates/genero';
-import { ContatoService } from 'src/app/model/services/contato.service';
+import { FirebaseService } from 'src/app/model/services/firebase.service';
 
 @Component({
   selector: 'app-cadastrar',
@@ -17,7 +17,7 @@ export class CadastrarPage implements OnInit {
   email!: string;
   genero!: Genero;
 
-  constructor(private router: Router, private alertController: AlertController, private contatoService: ContatoService) { 
+  constructor(private router: Router, private alertController: AlertController, private firebase: FirebaseService) { 
 
   }
 
@@ -33,7 +33,7 @@ export class CadastrarPage implements OnInit {
     else{
       this.presentAlert("Sucesso", "Usuário cadastrado com sucesso")
       let aux: Contato = new Contato(this.nome, this.telefone, this.email, this.genero);
-      this.contatoService.cadastrar(aux);
+      this.firebase.create(aux);
       this.router.navigate(["/home"]);
     }
   }

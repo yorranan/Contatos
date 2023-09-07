@@ -16,7 +16,8 @@
       <ion-input label="Nome" placeholder="Insira o nome" [(ngModel)]="nome" disabled={{edicao}}></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Telefone" placeholder="Insira o telefone" [(ngModel)]="telefone" type="number" disabled={{edicao}}></ion-input>
+      <ion-input label="Telefone" placeholder="Insira o telefone" [(ngModel)]="telefone" type="number"
+        disabled={{edicao}}></ion-input>
     </ion-item>
     <ion-item>
       <ion-input label="Email" placeholder="Insira o email" [(ngModel)]="email" disabled={{edicao}}></ion-input>
@@ -28,8 +29,9 @@
         <ion-select-option value="NAOINFORMAR">Não Informar</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-button expand="block" (click)="editar()" shape="round" color="success" disabled={{edicao}}>Salvar</ion-button>
-    <ion-button expand="block" (click)="excluir()" shape="round" disabled={{edicao}}>Excluir</ion-button>
+    <ion-button expand="block" (click)="editar()" shape="round" disabled={{edicao}}>Editar</ion-button>
+    <ion-button id="excluir" expand="block" shape="round" disabled={{edicao}}>Excluir</ion-button>
+    <ion-alert trigger="excluir" header="Cuidado!" subHeader="Deseja realmente exluir esse contato?" [buttons]="alertButtons"></ion-alert>
   </ion-list>
-  
+
 </ion-content>
